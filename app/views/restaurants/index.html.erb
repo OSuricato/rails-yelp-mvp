@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <% @restaurants.each do |restaurant| %>
+      <div class="col-md-6">
+        <div class="restaurant-card">
+          <img src="https://source.unsplash.com/random/300x300/?restaurant" alt="Restaurant Image" class="restaurant-image">
+          <div class="restaurant-details">
+            <h2 class="restaurant-name"><%= restaurant.name %></h2>
+            <p class="restaurant-address"><%= restaurant.address %></p>
+            <p class="restaurant-phone"><%= restaurant.phone_number %></p>
+            <%= link_to 'Details', restaurant, class: 'show-restaurant-link' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
